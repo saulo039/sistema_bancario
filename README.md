@@ -55,7 +55,7 @@ Aplicar os fundamentos de programação em Python, incluindo entrada e saída de
     python sistema_bancario.py
 
 ## 📝 Exemplo de Uso
-
+ ```texto
 Escolha uma Opção:
   [1] Depositar
   [2] Sacar
@@ -99,7 +99,7 @@ Escolha uma Opção:
 
 => 0
 Obrigado por usar nosso Sistema Bancário!
-
+ ```
 ## 📚 Aprendizados
 
 Durante o desenvolvimento deste projeto, foram colocados em prática:
@@ -115,7 +115,7 @@ Durante o desenvolvimento deste projeto, foram colocados em prática:
 Desenvolvido por Saulo Ribeiro Oliveira da Silva
 
 - 📧 [sauloribeiro039@gmail.com](mailto:sauloribeiro039@gmail.com)
-- 💼 [LinkedIn]linkedin.com/in/sauloribeiro039edIn
-- 🐙 [GitHub]github.com/saulo039ub
+- 💼 [LinkedIn](https://www.linkedin.com/in/sauloribeiro039?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B21VYI%2BhkRzyhD6A3OSLLfQ%3D%3D)
+- 🐙 [GitHub](https://github.com/saulo039)
 
 🧠 Projeto criado para fins educacionais, como parte da jornada de aprendizado em backend com Python no bootcamp Santander DIO 2025.
