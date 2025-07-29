@@ -49,13 +49,18 @@ Aplicar os fundamentos de programação em Python, incluindo entrada e saída de
    ```bash
    git clone https://github.com/saulo039/sistema-bancario-python.git
    cd sistema-bancario-python
+   ```
 
 2. Execute o script com Python:
-    ```bash
-    python sistema_bancario.py
+   ```bash
+   python sistema_bancario.py
+   ```
+
+---
 
 ## 📝 Exemplo de Uso
- ```texto
+
+```text
 Escolha uma Opção:
   [1] Depositar
   [2] Sacar
@@ -99,23 +104,31 @@ Escolha uma Opção:
 
 => 0
 Obrigado por usar nosso Sistema Bancário!
- ```
+```
+
+---
+
 ## 📚 Aprendizados
 
 Durante o desenvolvimento deste projeto, foram colocados em prática:
-- Lógica de programação aplicada a regras de negócio
-- Uso de variáveis para controle de estado (saldo, saques)
-- Condicionais (if, elif, else)
-- Estruturas de repetição (while)
-- Interação com o usuário via input() e print()
-- Manipulação de strings para criar um extrato detalhado
+
+- Lógica de programação aplicada a regras de negócio  
+- Uso de variáveis para controle de estado (saldo, saques)  
+- Condicionais (`if`, `elif`, `else`)  
+- Estruturas de repetição (`while`)  
+- Interação com o usuário via `input()` e `print()`  
+- Manipulação de strings para criar um extrato detalhado  
+
+---
 
 ## 👨‍💻 Autor
 
-Desenvolvido por Saulo Ribeiro Oliveira da Silva
+Desenvolvido por **Saulo Ribeiro Oliveira da Silva**
 
-- 📧 [sauloribeiro039@gmail.com](mailto:sauloribeiro039@gmail.com)
-- 💼 [LinkedIn](https://www.linkedin.com/in/sauloribeiro039?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B21VYI%2BhkRzyhD6A3OSLLfQ%3D%3D)
+- 📧 [sauloribeiro039@gmail.com](mailto:sauloribeiro039@gmail.com)  
+- 💼 [LinkedIn](https://www.linkedin.com/in/sauloribeiro039)  
 - 🐙 [GitHub](https://github.com/saulo039)
+
+---
 
 🧠 Projeto criado para fins educacionais, como parte da jornada de aprendizado em backend com Python no bootcamp Santander DIO 2025.
