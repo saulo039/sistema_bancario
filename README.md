@@ -13,15 +13,15 @@ Aplicar os fundamentos de programação em Python, incluindo entrada e saída de
 
 ## 🚀 Funcionalidades
 
-- [x] Depositar valores com confirmação
+- [x]  Depositar valores com confirmação
 - [x] Sacar valores com regras:
-  - Limite de R$ 500 por saque
-  - Máximo de 3 saques por sessão
-  - Não pode exceder o saldo
-- [x] Visualizar extrato com todas as movimentações
+      - Limite de R$ 500 por saque
+      - Máximo de 3 saques por sessão
+      - Não pode exceder o saldo
+- [x] Visualizar extrato com todas as movimentações, incluindo data e hora
 - [x] Cadastro de usuário (com CPF único)
 - [x] Cadastro de conta bancária vinculada a um usuário existente
-- [x] Listagem de contas cadastradas
+- [x] Listagem de contas cadastradas com agência fixa 0001
 - [x] Mensagens de sucesso ou falha claras para o usuário
 - [x] Encerramento amigável do sistema
 
@@ -40,6 +40,7 @@ Aplicar os fundamentos de programação em Python, incluindo entrada e saída de
 - **Conta bancária**:
   - Deve estar vinculada a um usuário existente
   - Número da conta é gerado automaticamente
+  - Agência fixa: 0001
 - Todas as operações válidas são registradas no extrato
 
 ---
@@ -69,50 +70,51 @@ Aplicar os fundamentos de programação em Python, incluindo entrada e saída de
 
 ```text
 ================ MENU ================
-[1] Depositar
-[2] Sacar
-[3] Extrato
-[4] Listar Contas
-[5] Novo Usuário
-[6] Nova Conta
+[1] Cadastrar cliente
+[2] Cadastrar conta
+[3] Listar contas
+[4] Depositar
+[5] Sacar
+[6] Extrato
 [0] Sair
 ======================================
 
-=> 5
-Informe o CPF (somente números): 12345678900
-Informe o nome completo: João Silva
-Informe a data de nascimento (dd-mm-aaaa): 01-01-1990
-Informe o endereço (logradouro, nro - bairro - cidade/sigla estado): Rua A, 123 - Centro - Belém/PA
-Usuário cadastrado com sucesso!
-
-=> 6
-Informe o CPF do usuário: 12345678900
-Conta criada com sucesso!
-
 => 1
-Informe o valor do depósito: 1000
-Depósito realizado com sucesso!
+Nome: João Silva
+Data de nascimento (dd/mm/aaaa): 01/01/1990
+CPF: 12345678900
+Endereço: Rua A, 123 - Centro - Belém/PA
+Cliente cadastrado com sucesso!
 
 => 2
-Informe o valor do saque: 300
-Saque realizado com sucesso!
-
-=> 3
-================ EXTRATO ================
-Depósito: R$ 1000.00
-Saque: R$ 300.00
-
-Saldo: R$ 700.00
-==========================================
+CPF do titular: 12345678900
+Conta 1 cadastrada com sucesso!
 
 => 4
-==========================================
-        Agência:        0001
-        C/C:            1
-        Titular:        João Silva
+CPF do titular: 12345678900
+Valor do depósito: 1000
+Depósito de R$ 1000.00 realizado com sucesso!
+
+=> 5
+CPF do titular: 12345678900
+Valor do saque: 300
+Saque de R$ 300.00 realizado com sucesso!
+
+=> 6
+CPF do titular: 12345678900
+
+========= EXTRATO =========
+30/08/2025 13:00:00 - Deposito: R$ 1000.00
+30/08/2025 13:02:15 - Saque: R$ 300.00
+
+Saldo atual: R$ 700.00
+============================
+
+=> 3
+Agência: 0001 - Conta 1 - Titular: João Silva - Saldo: R$ 700.00
 
 => 0
-Obrigado por usar nosso Sistema Bancário!
+Obrigado por usar nosso sistema bancário!
 
 ```
 
@@ -125,9 +127,9 @@ Durante o desenvolvimento deste projeto, foram colocados em prática:
 - Lógica de programação aplicada a regras de negócio
 - Uso de funções para organizar o código
 - Estruturas de repetição (while) e condicionais (if, elif, else)
-- Controle de estado com variáveis (saldo, extrato, usuarios, contas)
+- Controle de estado com variáveis (saldo, historico, clientes, contas)
 - Manipulação de strings para formatar extrato e mensagens
-- Organização e boas práticas na escrita de código Python 
+- Organização e boas práticas na escrita de código Python
 
 ---
 
