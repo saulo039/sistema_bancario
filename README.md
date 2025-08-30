@@ -15,9 +15,9 @@ Aplicar os fundamentos de programação em Python, incluindo entrada e saída de
 
 - [x]  Depositar valores com confirmação
 - [x] Sacar valores com regras:
-      - Limite de R$ 500 por saque
-      - Máximo de 3 saques por sessão
-      - Não pode exceder o saldo
+     - Limite de R$ 500 por saque
+     - Máximo de 3 saques por sessão
+     - Não pode exceder o saldo
 - [x] Visualizar extrato com todas as movimentações, incluindo data e hora
 - [x] Cadastro de usuário (com CPF único)
 - [x] Cadastro de conta bancária vinculada a um usuário existente
