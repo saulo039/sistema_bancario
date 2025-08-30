@@ -24,9 +24,10 @@ class PessoaFisica(Cliente):
 
 
 class Conta:
-    def __init__(self, numero, cliente):
+    def __init__(self, numero, cliente, agencia="0001"):
         self.numero = numero
         self.cliente = cliente
+        self.agencia = agencia  # agência fixa
         self.saldo = 0
         self.historico = Historico()
 
@@ -51,8 +52,8 @@ class Conta:
 
 
 class ContaCorrente(Conta):
-    def __init__(self, numero, cliente, limite=500, limite_saques=3):
-        super().__init__(numero, cliente)
+    def __init__(self, numero, cliente, agencia="0001", limite=500, limite_saques=3):
+        super().__init__(numero, cliente, agencia)
         self.limite = limite
         self.limite_saques = limite_saques
         self.numero_saques = 0
@@ -79,6 +80,9 @@ class Historico:
 
 
 class Transacao(ABC):
+    def __init__(self):
+        self.data = datetime.now()
+
     @abstractmethod
     def registrar(self, conta):
         pass
@@ -86,6 +90,7 @@ class Transacao(ABC):
 
 class Saque(Transacao):
     def __init__(self, valor):
+        super().__init__()
         self.valor = valor
 
     def registrar(self, conta):
@@ -95,6 +100,7 @@ class Saque(Transacao):
 
 class Deposito(Transacao):
     def __init__(self, valor):
+        super().__init__()
         self.valor = valor
 
     def registrar(self, conta):
@@ -135,7 +141,8 @@ def cadastrar_conta():
         return
 
     numero_conta = len(contas) + 1
-    conta = ContaCorrente(numero_conta, cliente)
+    agencia = "0001"  # agência fixa
+    conta = ContaCorrente(numero_conta, cliente, agencia)
     cliente.adicionar_conta(conta)
     contas.append(conta)
     print(f"Conta {numero_conta} cadastrada com sucesso!")
@@ -187,7 +194,8 @@ def exibir_extrato():
         for transacao in conta.historico.transacoes:
             tipo = transacao.__class__.__name__
             valor = transacao.valor
-            print(f"{tipo}: R$ {valor:.2f}")
+            data = transacao.data.strftime("%d/%m/%Y %H:%M:%S")
+            print(f"{data} - {tipo}: R$ {valor:.2f}")
     print(f"\nSaldo atual: R$ {conta.saldo:.2f}")
     print("============================")
 
@@ -196,7 +204,8 @@ def listar_contas():
         print("Nenhuma conta cadastrada.")
         return
     for conta in contas:
-        print(f"Conta {conta.numero} - Titular: {conta.cliente.nome} - Saldo: R$ {conta.saldo:.2f}")
+        print(f"Agência: {conta.agencia} - Conta {conta.numero} - Titular: {conta.cliente.nome} - Saldo: R$ {conta.saldo:.2f}")
+
 
 # ==================== MENU ====================
 
@@ -231,6 +240,7 @@ Escolha uma opção:
             break
         else:
             print("Opção inválida, tente novamente.")
+
 
 # ==================== EXECUÇÃO ====================
 if __name__ == "__main__":
